@@ -35,7 +35,7 @@ df['Start'] = pd.to_datetime(df['Start'], format='%I:%M %p')
 df['End'] = pd.to_datetime(df['End'], format='%I:%M %p')
 
 # Set up the time slots (every hour from 12 AM to 11 PM)
-time_slots = pd.date_range('00:00', '23:00', freq='1H').time
+time_slots = pd.date_range('00:00', '23:00', freq='1h').time
 time_slots_str = [t.strftime('%H:%M') for t in time_slots]
 
 # Define weights for different expertise levels, including Principal/Lead Developer
@@ -100,5 +100,5 @@ for i, skill in enumerate(weighted_availability.columns):
 
 plt.tight_layout()
 # Save the image to a file
-plt.savefig('plots/weighted_availability_heatmap.png')
+plt.savefig('plots/linear_trend_seaborn.png')
 plt.show()
