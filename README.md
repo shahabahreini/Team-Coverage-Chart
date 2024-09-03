@@ -11,6 +11,7 @@ This project provides a comprehensive suite of visualization tools for analyzing
 - **Skill-Based Grouping**: Groups team members by their skills, providing a clear view of skill distribution.
 - **Interactive Charts**: Offers visually appealing, interactive charts for enhanced understanding of team dynamics.
 - **Customizable**: Easily adaptable YAML configuration to reflect specific team structures and time zones.
+- **Weighted Scoring**: Uses expertise-based weights to calculate more accurate skill coverage.
 
 ## Getting Started
 
@@ -22,19 +23,16 @@ This project provides a comprehensive suite of visualization tools for analyzing
 ### Installation
 
 1. Clone the repository:
-
    ```bash
    git clone https://github.com/yourusername/team-skill-coverage-visualization.git
    ```
 
 2. Navigate to the project directory:
-
    ```bash
    cd team-skill-coverage-visualization
    ```
 
 3. Install the required Python libraries:
-
    ```bash
    pip install -r requirements.txt
    ```
@@ -43,7 +41,7 @@ This project provides a comprehensive suite of visualization tools for analyzing
 
 ### Configuration
 
-Update the `team_data.yaml` file with your team's schedule and skills. The file should be structured as follows:
+Update the `team_data.yaml` file with your team's schedule, skills, and expertise weights. The file should be structured as follows:
 
 ```yaml
 Frontend Development:
@@ -54,30 +52,61 @@ Frontend Development:
   ...
 Backend Development:
   ...
+
+Weights:
+  Junior Developer: 1
+  Mid-level Developer: 2
+  Senior Developer: 3
+  Team Lead: 4
 ```
+
+### Scoring Calculation
+
+The scoring system uses weights to calculate the skill coverage based on team members' expertise levels. Here's how it works:
+
+1. Each expertise level is assigned a weight (e.g., Junior: 1, Mid-level: 2, Senior: 3, Team Lead: 4).
+2. For each hour, the script calculates the total weighted score by summing the weights of all available team members.
+3. This weighted score represents the skill coverage for that particular hour.
+4. The resulting charts display these weighted scores, providing a more accurate representation of the team's skill distribution and availability.
+
+### Updating Weights
+
+To update the expertise weights:
+
+1. Open the `team_data.yaml` file.
+2. Locate the `Weights` section at the bottom of the file.
+3. Modify the values associated with each expertise level as needed.
+4. Save the file.
+
+Example:
+```yaml
+Weights:
+  Junior Developer: 1
+  Mid-level Developer: 2.5
+  Senior Developer: 4
+  Team Lead: 5
+```
+
+After updating the weights, re-run the chart generation scripts to see the updated visualizations reflecting the new scoring.
 
 ### Generating Charts
 
 1. **24-Hour Skill Coverage (One Glance)**
-
    ```bash
    python "24H Skill Coverage - One Glance.py"
    ```
 
 2. **24-Hour Skill Coverage with Linear Trend (Plotly)**
-
    ```bash
    python "24H Skill Coverage - Included Linear Trend - Plotly.py"
    ```
 
 3. **24-Hour Skill Coverage with Linear Trend (Seaborn)**
-
    ```bash
    python "24H Skill Coverage - Included Linear Trend - Seaborn.py"
    ```
 
 4. **24-Hour Skill Coverage Separated by Groups**
-
    ```bash
    python "24H Skill Coverage - Separated by Groups.py"
    ```
