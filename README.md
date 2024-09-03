@@ -1,4 +1,3 @@
-```markdown
 # Team Skill Coverage Visualization
 
 ## Overview

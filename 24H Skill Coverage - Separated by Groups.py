@@ -5,11 +5,14 @@ from plotly.subplots import make_subplots
 from collections import defaultdict
 
 # Function to convert time to float (e.g., 1:30 AM -> 1.5)
+
+
 def time_to_float(t):
     return t.hour + t.minute / 60.0
 
+
 # Load YAML data
-yaml_file_path = 'team_data2.yaml'
+yaml_file_path = 'team_data.yaml'
 with open(yaml_file_path, 'r') as file:
     data = yaml.safe_load(file)
 
@@ -40,7 +43,7 @@ df = pd.DataFrame(developers)
 
 # Create subplots
 num_skills = len(skill_groups)
-fig = make_subplots(rows=num_skills, cols=1, shared_xaxes=False, vertical_spacing=0.05,
+fig = make_subplots(rows=num_skills, cols=1, shared_xaxes=False, vertical_spacing=0.15,
                     subplot_titles=list(skill_groups.keys()))
 
 # Consistent color coding
@@ -53,8 +56,9 @@ colors = {
 
 for skill_index, (skill, dev_list) in enumerate(skill_groups.items(), start=1):
     for dev_name in dev_list:
-        dev_data = df[(df['Skill'] == skill) & (df['Name'] == dev_name)].iloc[0]
-        
+        dev_data = df[(df['Skill'] == skill) & (
+            df['Name'] == dev_name)].iloc[0]
+
         fig.add_trace(go.Bar(
             y=[dev_name],
             x=[dev_data['End_float'] - dev_data['Start_float']],
@@ -82,7 +86,7 @@ fig.update_layout(
         x=1.02
     ),
     bargap=0.2,
-    bargroupgap=0.1,
+    bargroupgap=0.2,
 )
 
 # Update x-axes and add time axes for each subplot
@@ -94,8 +98,7 @@ for i in range(1, num_skills + 1):
         range=[0, 24],
         row=i, col=1
     )
-    
-    
+
 
 # Update y-axes
 for i in range(1, num_skills + 1):
