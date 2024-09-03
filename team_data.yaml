@@ -1,116 +1,55 @@
-# This is the Demo content
 Frontend Development:
-  Alex Johnson:
-    start: "1:30 AM"
-    end: "10:30 AM"
-    type: Primary
-  Jamie Smith:
-    start: "1:30 AM"
-    end: "10:30 AM"
-    type: Primary
-  Casey Lee:
-    start: "1:30 AM"
-    end: "10:30 AM"
-    type: Primary
-  Jordan Brown:
+  Alice Johnson:
     start: "9:00 AM"
     end: "5:00 PM"
-    type: Secondary
-  Taylor White:
-    start: "9:00 AM"
-    end: "5:00 PM"
-    type: Secondary
-  Morgan Green:
-    start: "9:00 AM"
-    end: "5:00 PM"
-    type: Secondary
-
-Backend Development:
-  Riley Adams:
-    start: "1:30 AM"
-    end: "10:30 AM"
-    type: Primary
-  Cameron Miller:
-    start: "1:30 AM"
-    end: "10:30 AM"
-    type: Primary
-  Avery Davis:
-    start: "1:30 AM"
-    end: "10:30 AM"
-    type: Primary
-  Jordan Taylor:
-    start: "1:30 AM"
-    end: "10:30 AM"
-    type: Primary
-  Taylor White:
-    start: "9:00 AM"
-    end: "5:00 PM"
-    type: Secondary
-  Morgan Green:
-    start: "9:00 AM"
-    end: "5:00 PM"
-    type: Secondary
-
-Blockchain Development:
-  Riley Adams:
-    start: "1:30 AM"
-    end: "10:30 AM"
-    type: Primary
-  Cameron Miller:
-    start: "1:30 AM"
-    end: "10:30 AM"
-    type: Primary
-  Alex Kim (1):
-    start: "4:00 AM"
-    end: "7:00 AM"
-    type: Secondary
-  Alex Kim (2):
-    start: "9:00 AM"
-    end: "10:00 AM"
-    type: Secondary
-  Alex Kim (3):
-    start: "3:00 PM"
+    expertise: Senior Developer
+  Bob Smith:
+    start: "10:00 AM"
     end: "6:00 PM"
-    type: Secondary
-
-Infrastructure:
-  Dakota Brooks:
-    start: "1:30 AM"
-    end: "10:30 AM"
-    type: Primary
-
-UX Development:
-  Casey Morgan:
-    start: "1:30 AM"
-    end: "10:30 AM"
-    type: Primary
-
-Quality Control:
-  Taylor Jordan:
-    start: "1:30 AM"
-    end: "10:30 AM"
-    type: Primary
-  Jamie Lee:
-    start: "1:30 AM"
-    end: "10:30 AM"
-    type: Primary
-
-CloudOps:
-  Skyler Morgan:
-    start: "6:30 AM"
-    end: "10:30 AM"
-    type: Primary
-  River Taylor:
-    start: "7:30 AM"
-    end: "12:30 PM"
-    type: Primary
-  Parker Quinn:
-    start: "8:15 AM"
-    end: "5:00 PM"
-    type: Primary
-
-Delivery Lead:
-  Jordan Casey:
+    expertise: Mid-Level Developer
+  Carol Davis:
     start: "8:00 AM"
     end: "4:00 PM"
-    type: Primary
+    expertise: Junior Developer
+
+Backend Development:
+  David Wilson:
+    start: "9:30 AM"
+    end: "5:30 PM"
+    expertise: Senior Developer
+  Eve Brown:
+    start: "8:30 AM"
+    end: "4:30 PM"
+    expertise: Mid-Level Developer
+  Frank Miller:
+    start: "10:30 AM"
+    end: "6:30 PM"
+    expertise: Junior Developer
+
+Quality Control:
+  Grace Lee:
+    start: "9:00 AM"
+    end: "5:00 PM"
+    expertise: Senior Developer
+  Henry Taylor:
+    start: "8:00 AM"
+    end: "4:00 PM"
+    expertise: Mid-Level Developer
+
+People:
+  Alice Johnson:
+    main_skill: Frontend Development
+  Bob Smith:
+    main_skill: Frontend Development
+  Carol Davis:
+    main_skill: Frontend Development
+  David Wilson:
+    main_skill: Backend Development
+  Eve Brown:
+    main_skill: Backend Development
+  Frank Miller:
+    main_skill: Backend Development
+  Grace Lee:
+    main_skill: Quality Control
+  Henry Taylor:
+    main_skill: Quality Control
